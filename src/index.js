@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+//import react and reactDOM
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//import our custom components
+import CommentDetails from "./CommentDetails";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//import fakerJS
+// import Faker from 'faker';
+
+//import custom css
+import "semantic-ui-css/semantic.min.css";
+
+//create component
+
+// import App from './App'
+
+const App = () => {
+  return (
+    <div className="ui container comments">
+      <CommentDetails author ="Daniel" date="Yesterday" text="Hey Candice"/>
+      <CommentDetails author="Candice" date="Yesterday" text="Hey Danny!"/>
+      <CommentDetails author = "Jack" date="Today" text="Good morning guys!"/>
+    </div>
+  );
+};
+
+//create renderer
+
+ReactDOM.render(<App />, document.getElementById("root"));
