@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 //import our custom components
 import CommentDetails from "./CommentDetails";
 
+import ApprovalCard from "./ApprovalCard";
+
 //import fakerJS
 // import Faker from 'faker';
 
@@ -18,9 +20,18 @@ import "semantic-ui-css/semantic.min.css";
 const App = () => {
   return (
     <div className="ui container comments">
-      <CommentDetails author ="Daniel" date="Yesterday" text="Hey Candice"/>
-      <CommentDetails author="Candice" date="Yesterday" text="Hey Danny!"/>
-      <CommentDetails author = "Jack" date="Today" text="Good morning guys!"/>
+      <ApprovalCard>
+        <CommentDetails author="Jenny" date="Yesterday" text="Hey Danny!" />
+      </ApprovalCard>
+
+      <ApprovalCard>
+        <CommentDetails author="Candice" date="Yesterday" text="Hey Danny!" />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetails author="Jack" date="Today" text="Good morning guys!" />
+      </ApprovalCard>
+
+      <div />
     </div>
   );
 };

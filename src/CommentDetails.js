@@ -4,7 +4,7 @@ import React from "react";
 import Faker from "faker";
 
 const CommentDetails = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <div className="comment">
